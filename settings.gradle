@@ -1,0 +1,2 @@
+rootProject.name='Case selection'
+include ':app'
