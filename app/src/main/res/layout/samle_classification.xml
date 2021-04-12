@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/horizontal_margin"
+    android:layout_margin="@dimen/horizontal_margin">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="#e6e6e6">
+        <TableRow
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp">
+            <CheckBox
+                android:id="@+id/new_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp">
+            <CheckBox
+                android:id="@+id/followup_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow Up"
+                android:layout_gravity="center_vertical"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/followup_sample_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="BANCOVID"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp">
+            <CheckBox
+                android:id="@+id/contact_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:layout_gravity="center_vertical"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/contact_sample_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="BANCOVID"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+        <TableRow
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp">
+            <CheckBox
+                android:id="@+id/death_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Death" />
+        </TableRow>
+        <TableRow
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp">
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:visibility="gone"/>
+        </TableRow>
+    </TableLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
